@@ -1,0 +1,85 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* разбивка на колонны  */
+    grid-column-gap: 10px;
+    /* отступ колонок  */
+    grid-row-gap: 10px;
+    /* отступ строк */
+    grid-auto-rows: minmax(50,auto);
+    /* авторазмер строк */
+    justify-content: center;
+    /* выравнивание контента по star/center/end */
+    /* align-content: end; выравнивание по оси Y */
+    /* align-items: end; */
+    /* выравнивание по оси Y  относительно ячейки */
+    /* justify-items: end; */
+    /* выравнивание по оси Х относительно ячейки */
+
+
+
+
+}
+
+
+
+.item {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.item_3 {
+    justify-self:end;
+    align-self: end;
+    /* выравнивание по оси Х u Y  себя(элемеента) */
+}
+
+.item_6 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* установка началаьного и конечного располжения колнки */
+    grid-row-start: 1;
+    grid-row-end: 40;
+    /* установка начального и конечного положения строкти */
+    justify-self:end;
+    align-self: end;
+}
+.item_7 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.container-2 {
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+        'header header '
+        'sidebar content';
+    /* разбивка на области */
+    grid-gap: 10px;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows:150px 1fr;
+    /* указание размера колон и строк */
+}
+
+.header {
+    grid-area: header;
+    /* определение области */
+}
+
+.sidebar {
+    grid-area: sidebar;
+    align-self: start;
+     /* определение области */
+}
+
+.content { 
+    grid-area: content;
+     /* определение области */
+}
+.link {
+    margin: 10px;
+    border: 1px solid black;
+}
+
+
